@@ -53,23 +53,23 @@ public class BugZap extends PApplet
 	{
 		// Draw the bug
 		stroke(255);
-		float saucerHeight = bugWidth * 0.7f;
-		line(x, y - saucerHeight, x - halfBugWidth, y);
-		line(x, y - saucerHeight, x +  halfBugWidth, y);		
-		line(x - halfBugWidth, y, x - halfBugWidth, y);
-		line(x - halfBugWidth, y, x + halfBugWidth, y);
-		float feet = bugWidth * 0.1f;
-		line(x - feet, y, x - halfBugWidth, y + halfBugWidth);
-		line(x  + feet, y, x + halfBugWidth, y + halfBugWidth);
+		float saucerHeight = bugWidth * 0.7f;  //21
+		line(x, y - saucerHeight, x - halfBugWidth, y);  	//line(300, 29, 285, 50)
+		line(x, y - saucerHeight, x +  halfBugWidth, y); 	//line(300, 29, 315, 50)		
+		line(x - halfBugWidth, y, x - halfBugWidth, y);		//line(285, 50, 285, 50)
+		line(x - halfBugWidth, y, x + halfBugWidth, y);		//line(285, 50, 315, 50)
+		float feet = bugWidth * 0.1f;  //3
+		line(x - feet, y, x - halfBugWidth, y + halfBugWidth);	//line(between 300, 29, 300 - 15, 50)
+		line(x  + feet, y, x + halfBugWidth, y + halfBugWidth);	//line(between 300, 29, 300 - 15, 50)
 
 		
-		feet = bugWidth * 0.3f;
-		line(x - feet, y, x - halfBugWidth, y + halfBugWidth);
-		line(x  + feet, y, x + halfBugWidth, y + halfBugWidth);
+		feet = bugWidth * 0.3f;  //9
+		line(x - feet, y, x - halfBugWidth, y + halfBugWidth);	//line(between 300, 29, 300 - 15, 50)
+		line(x  + feet, y, x + halfBugWidth, y + halfBugWidth);	//line(between 300, 29, 300 - 15, 50)
 
-		float eyes  = bugWidth * 0.1f;
-		line(x - eyes, y - eyes, x - eyes, y - eyes * 2f);
-		line(x + eyes, y - eyes, x + eyes, y - eyes * 2f);
+		float eyes  = bugWidth * 0.1f; //3
+		line(x - eyes, y - eyes, x - eyes, y - eyes * 2f);	//line(between 300, 29, 300 - 15, 50)
+		line(x + eyes, y - eyes, x + eyes, y - eyes * 2f);	//line(between 300, 29, 300 - 15, 50)
 	
 	}
 
