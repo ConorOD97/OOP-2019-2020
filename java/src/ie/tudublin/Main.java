@@ -33,7 +33,11 @@ public class Main
         Cat topcat = new Cat();
         topcat.speak();
         */
+        Cat topCat = new Cat();
 
+        for (int i=0;i<9;i++){
+            topCat.kill();
+        }
         Main main = new Main();
 		main.bugZap();
         
