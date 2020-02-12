@@ -16,7 +16,7 @@ public class Loops extends PApplet
 		colorMode(HSB,250,100,50);
 		
 	}
-
+git c
 	public void Star(float X, float Y, float XX, float YY){
 		int i = 0;
 		int gap = 10;
