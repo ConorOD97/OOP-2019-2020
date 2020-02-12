@@ -15,17 +15,16 @@ public class Loops extends PApplet
 	{
 		colorMode(HSB);
 	}
-
 	
-	public void keyPressed()
-	{
-		if (key == ' ')
-		{
-			
-		}
-	}	
+	float X = 0;
+	float Y = 0;
+	float XX = width;
+	float YY = height;
 
-	
+	float W =50;
+	float H = 50;
+	float CX = W/2;
+	float CY = height/2;
 
 	public void Star(float X, float Y, float XX, float YY){
 		int i = 0;
@@ -40,23 +39,6 @@ public class Loops extends PApplet
 			X += gap;
 			i++;
 		}
-			// for (i = 0;i<numLines;i++){
-			// 	line(X , Y, XX, YY);
-			// 	X+=gap;
-			// }
-
-			// X = 0;
-			// for (i = 0;i<numLines;i++){
-			// 	line(X , Y+=gap, XX, YY);
-			// }
-
-			// for (i = 0;i<numLines;i++){
-			// 	line(X+=gap , Y, XX, YY);
-			// }
-
-			// for (i = 0;i<numLines;i++){
-			// 	line(X , Y-=gap, XX, YY);
-			// }
 
 	}
 
@@ -69,17 +51,6 @@ public class Loops extends PApplet
 
 	public void draw()
 	{	
-		
-		float X = 0;
-		float Y = 0;
-		float XX = width;
-		float YY = height;
-
-		float W =50;
-		float H = 50;
-		float CX = W/2;
-		float CY = height/2;
-
 		background(210);		
 		stroke(0);
 		//Star(X,Y,XX,YY);
