@@ -29,32 +29,24 @@ public class Loops extends PApplet
 
 	public void Star(float X, float Y, float XX, float YY){
 		int i;
-		int loop =width/10 + 10;
+		int loop =51;
 		
-		if (X < width){
 			for (i = 0;i<loop;i++){
 				line(X+=10 , Y, XX, YY);
 			}
-		}
 
-		if (X >= width){
 			X = 0;
 			for (i = 0;i<loop;i++){
 				line(X , Y+=10, XX, YY);
 			}
-		}
 
-		 if (Y >= height){
 			for (i = 0;i<loop;i++){
 				line(X+=10 , Y, XX, YY);
 			}
-		 }
 
-		 if (Y >= height && X >= width){
 			for (i = 0;i<loop;i++){
 				line(X , Y-=10, XX, YY);
 			}
-		 }
 
 	}
 
@@ -80,8 +72,8 @@ public class Loops extends PApplet
 
 		background(210);		
 		stroke(0);
-		//Star(X,Y,XX,YY);
-		RowofCircles(CX, CY, W, H);
+		Star(X,Y,XX,YY);
+		//RowofCircles(CX, CY, W, H);
 		// line(10, 10, 100, 10);
 		// line(10, 20, 100, 20);
 		// line(10, 30, 100, 30);
