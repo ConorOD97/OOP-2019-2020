@@ -14,17 +14,8 @@ public class Loops extends PApplet
 	public void setup() 
 	{
 		colorMode(HSB);
+		
 	}
-	
-	float X = 0;
-	float Y = 0;
-	float XX = width;
-	float YY = height;
-
-	float W =50;
-	float H = 50;
-	float CX = W/2;
-	float CY = height/2;
 
 	public void Star(float X, float Y, float XX, float YY){
 		int i = 0;
@@ -51,10 +42,19 @@ public class Loops extends PApplet
 
 	public void draw()
 	{	
+		float X1 = 0;
+		float Y1 = 0;
+		float X2 = width;
+		float Y2 = height;
+
+		float W =50;
+		float H = 50;
+		float CX = W/2;
+		float CY = height/2;
 		background(210);		
 		stroke(0);
-		//Star(X,Y,XX,YY);
-		RowofCircles(CX, CY, W, H);
+		Star(X1,Y1,X2,Y2);
+		//RowofCircles(CX, CY, W, H);
 		// line(10, 10, 100, 10);
 		// line(10, 20, 100, 20);
 		// line(10, 30, 100, 30);
@@ -71,7 +71,6 @@ public class Loops extends PApplet
 		// 	line(300, yy, 400, yy);
 		// 	yy += 10;
 		// }
-		
 	
 	}
 }
