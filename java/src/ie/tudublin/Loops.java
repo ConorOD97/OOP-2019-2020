@@ -28,25 +28,35 @@ public class Loops extends PApplet
 	
 
 	public void Star(float X, float Y, float XX, float YY){
-		int i;
-		int loop =51;
+		int i = 0;
+		int gap = 10;
+		int numLines =width/gap + 1;
 		
-			for (i = 0;i<loop;i++){
-				line(X+=10 , Y, XX, YY);
-			}
+		while (i < numLines){
+			line(X , Y, XX, YY);
+			line(0 , X, width, XX);
+			
+			XX-=gap;	
+			X += gap;
+			i++;
+		}
+			// for (i = 0;i<numLines;i++){
+			// 	line(X , Y, XX, YY);
+			// 	X+=gap;
+			// }
 
-			X = 0;
-			for (i = 0;i<loop;i++){
-				line(X , Y+=10, XX, YY);
-			}
+			// X = 0;
+			// for (i = 0;i<numLines;i++){
+			// 	line(X , Y+=gap, XX, YY);
+			// }
 
-			for (i = 0;i<loop;i++){
-				line(X+=10 , Y, XX, YY);
-			}
+			// for (i = 0;i<numLines;i++){
+			// 	line(X+=gap , Y, XX, YY);
+			// }
 
-			for (i = 0;i<loop;i++){
-				line(X , Y-=10, XX, YY);
-			}
+			// for (i = 0;i<numLines;i++){
+			// 	line(X , Y-=gap, XX, YY);
+			// }
 
 	}
 
@@ -60,10 +70,10 @@ public class Loops extends PApplet
 	public void draw()
 	{	
 		
-		float X = -10;
+		float X = 0;
 		float Y = 0;
-		float XX = width/2;
-		float YY = height/2;
+		float XX = width;
+		float YY = height;
 
 		float W =50;
 		float H = 50;
@@ -72,8 +82,8 @@ public class Loops extends PApplet
 
 		background(210);		
 		stroke(0);
-		Star(X,Y,XX,YY);
-		//RowofCircles(CX, CY, W, H);
+		//Star(X,Y,XX,YY);
+		RowofCircles(CX, CY, W, H);
 		// line(10, 10, 100, 10);
 		// line(10, 20, 100, 20);
 		// line(10, 30, 100, 30);
