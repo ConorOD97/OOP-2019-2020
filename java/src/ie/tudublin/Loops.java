@@ -13,7 +13,7 @@ public class Loops extends PApplet
 
 	public void setup() 
 	{
-		colorMode(HSB);
+		colorMode(HSB,250,100,50);
 		
 	}
 
@@ -34,8 +34,10 @@ public class Loops extends PApplet
 	}
 
 	public void RowofCircles(float CX, float CY, float W, float H){
-		for (int i = 0;i<=10;i++){
+		int numCircles = 10;
+		for (int i = 0; i < numCircles; i++){
 			ellipse(CX,CY,W, H);
+			CX += W;
 		}
 			
 	}
@@ -51,10 +53,12 @@ public class Loops extends PApplet
 		float H = 50;
 		float CX = W/2;
 		float CY = height/2;
+
 		background(210);		
 		stroke(0);
 		Star(X1,Y1,X2,Y2);
-		//RowofCircles(CX, CY, W, H);
+		fill(200);
+		RowofCircles(CX, CY, W, H);
 		// line(10, 10, 100, 10);
 		// line(10, 20, 100, 20);
 		// line(10, 30, 100, 30);
