@@ -13,10 +13,19 @@ public class Loops extends PApplet
 
 	public void setup() 
 	{
-		colorMode(HSB,250,100,50);
+		colorMode(HSB,10);
 		
 	}
-git c
+	
+	public void Rectangle(float x, float y, float width, float height){
+			for (int i=0;i<10;i++){
+				noStroke();
+				fill(i,10,10);
+				rect(x,y,width,height);
+				x+=width;
+			}
+		}
+
 	public void Star(float X, float Y, float XX, float YY){
 		int i = 0;
 		int gap = 10;
@@ -59,6 +68,7 @@ git c
 		Star(X1,Y1,X2,Y2);
 		fill(200);
 		RowofCircles(CX, CY, W, H);
+		Rectangle(X1,Y1,X2*.1f,Y2);
 		// line(10, 10, 100, 10);
 		// line(10, 20, 100, 20);
 		// line(10, 30, 100, 30);
