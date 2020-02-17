@@ -9,6 +9,12 @@ public class Main
         processing.core.PApplet.runSketch( a, new HelloProcessing());
     }
 
+    public void helloArrays()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Arrays());
+    }
+
     public void loops()
     {
 		String[] a = {"MAIN"};
@@ -27,6 +33,12 @@ public class Main
         processing.core.PApplet.runSketch( a, new AirSeaBattle());
     }
     
+    public void arrays(){
+        Arrays array = new Arrays();
+
+        array.largest();
+        array.smallest();
+    }
     public void dogsCats()
     {
         // Polymorphism means
@@ -69,6 +81,6 @@ public class Main
     public static void main(String[] arg)
     {
         Main main = new Main();
-		main.loops();        
+		main.helloArrays();        
     }
 }
