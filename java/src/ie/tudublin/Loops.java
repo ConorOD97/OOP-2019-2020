@@ -13,7 +13,7 @@ public class Loops extends PApplet
 
 	public void setup() 
 	{
-		colorMode(HSB,10);
+		colorMode(HSB,100);
 		
 	}
 	
@@ -51,6 +51,15 @@ public class Loops extends PApplet
 			
 	}
 
+	public void NestCircle(float CX,float CY,float W,float H){
+		for (int i= 25; i < height; i+=50){
+			for (int j = 25; j <width; j+=50){
+				fill(i,j,j);
+				ellipse(i,j,W, H);
+			}
+		}
+	}
+
 	public void draw()
 	{	
 		float X1 = 0;
@@ -63,12 +72,13 @@ public class Loops extends PApplet
 		float CX = W/2;
 		float CY = height/2;
 
-		background(210);		
+		background(8);		
 		stroke(0);
-		Star(X1,Y1,X2,Y2);
-		fill(200);
-		RowofCircles(CX, CY, W, H);
-		Rectangle(X1,Y1,X2*.1f,Y2);
+		//Star(X1,Y1,X2,Y2);
+		//fill(200);
+		//RowofCircles(CX, CY, W, H);
+		//Rectangle(X1,Y1,X2*.1f,Y2);
+		NestCircle(CX, CY, W, H);
 		// line(10, 10, 100, 10);
 		// line(10, 20, 100, 20);
 		// line(10, 30, 100, 30);
