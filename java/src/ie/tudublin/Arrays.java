@@ -6,7 +6,8 @@ import processing.core.PApplet;
 
 public class Arrays extends PApplet
 {	
-
+	int[] xcoords = {20,40,60,80,140,160,180,200,220,240};
+	int[] ycoords = {345,360,315,390,330,240,330,135,390,150,300};
 	//float[] rainFall = new float[12]; 
 	float[] rainFall = {45, 37, 55, 27, 38, 50, 79, 48, 104, 31, 100, 58};
 	String[] months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
@@ -54,6 +55,20 @@ public class Arrays extends PApplet
 		println(months[maxIndex] + " had the maximum rainfall of " + rainFall[maxIndex]);
 	}
 
+	void drawLineGraph(){
+		int x = xcoords[0];
+		int y = ycoords[0];
+
+		for (int i=0;i<xcoords.length;i++){
+			stroke(255);
+			line(x, y, x, y);
+
+			x = xcoords[i];
+			y = ycoords[i];
+		
+			
+		}
+	}
 	void drawBarChart()
 	{
 		float w = width / (float) rainFall.length;
@@ -93,6 +108,7 @@ public class Arrays extends PApplet
 		background(0);		
 		colorMode(HSB);	
 
-		drawBarChart();
+		//drawBarChart();
+		drawLineGraph();
 	}
 }
