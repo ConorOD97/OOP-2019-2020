@@ -6,8 +6,8 @@ import processing.core.PApplet;
 
 public class Arrays extends PApplet
 {	
-	int[] xcoords = {20,40,60,80,140,160,180,200,220,240};
-	int[] ycoords = {345,360,315,390,330,240,330,135,390,150,300};
+	// int[] xcoords = {20,40,60,80,140,160,180,200,220,240};
+	// int[] ycoords = {345,360,315,390,330,240,330,135,390,150,300};
 	//float[] rainFall = new float[12]; 
 	float[] rainFall = {45, 37, 55, 27, 38, 50, 79, 48, 104, 31, 100, 58};
 	String[] months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
@@ -56,18 +56,24 @@ public class Arrays extends PApplet
 	}
 
 	void drawLineGraph(){
-		int x = xcoords[0];
-		int y = ycoords[0];
+		// int x = xcoords[0];
+		// int y = ycoords[0];
+		// int xx = xcoords[1];
+		// int yy = xcoords[1];
 
-		for (int i=0;i<xcoords.length;i++){
-			stroke(255);
-			line(x, y, x, y);
-
-			x = xcoords[i];
-			y = ycoords[i];
-		
+		// for (int i=0;i<xcoords.length;i++){
 			
-		}
+			
+		// 	stroke(255);
+		// 	line(x, y, xx, yy);
+
+		// 	x = xcoords[i];
+		// 	y = ycoords[i];
+		// 	xx = xcoords[i];
+		// 	yy = ycoords[i];
+		// }
+
+		line(x,y,x1,y1);
 	}
 	void drawBarChart()
 	{
@@ -107,7 +113,6 @@ public class Arrays extends PApplet
 	{	
 		background(0);		
 		colorMode(HSB);	
-
 		//drawBarChart();
 		drawLineGraph();
 	}
