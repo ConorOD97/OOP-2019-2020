@@ -56,24 +56,19 @@ public class Arrays extends PApplet
 	}
 
 	void drawLineGraph(){
-		// int x = xcoords[0];
-		// int y = ycoords[0];
-		// int xx = xcoords[1];
-		// int yy = xcoords[1];
+		for(int i = 1;i < rainFall.length;i++){
+			float border = height * .05f;
 
-		// for (int i=0;i<xcoords.length;i++){
+			//float x1 = map(i-1, start1, stop1, start2, stop2);
+			//float x2 = map(value, start1, stop1, start2, stop2);
+
+			float y1 = map(i-1, 0,150,height-border,border);
+			float y2 = map(i, 0,150,height-border,border);
+			stroke(135,255,255);
+			line(x1, y1, x2, y2);
+
 			
-			
-		// 	stroke(255);
-		// 	line(x, y, xx, yy);
-
-		// 	x = xcoords[i];
-		// 	y = ycoords[i];
-		// 	xx = xcoords[i];
-		// 	yy = ycoords[i];
-		// }
-
-		line(x,y,x1,y1);
+		}
 	}
 	void drawBarChart()
 	{
