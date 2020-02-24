@@ -76,6 +76,25 @@ public class ArraysExample extends PApplet
 		}
 	}
 
+	void LineChart(){
+
+		float x = width  *.08f;
+		float y = rainFall[0];
+		float x1 = x*2;
+		float y1 = rainFall[1];
+		for (int i=0;i < 1;i++){
+			y = rainFall[i];
+			
+			stroke(255);
+			line (x,y,x1,y1);
+			x1 += x;
+			
+			
+			
+		}
+
+	}
+
 	public void keyPressed()
 	{
 		if (key == ' ')
@@ -88,7 +107,7 @@ public class ArraysExample extends PApplet
 	{	
 		background(0);		
 		colorMode(HSB);	
-
-		drawBarChart();
+		LineChart();
+		//drawBarChart();
 	}
 }
